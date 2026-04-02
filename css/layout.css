@@ -1,0 +1,56 @@
+:root {
+    --txt-color-01: #555;           /* Колір основного тексту */
+    --txt-color-02: #ccc;           /* Колір тексту інверсія */
+    --header-color: #333;
+    --lnk-color: #930;              /* Колір покликань */
+    --lnk-hover: #f30;              /* Колір при наведенні */
+    --bg-primary-main-color: #ccc;  /* Колір основного фону */
+    --bg-second-color: #555;        /* Колір фону 2*/
+    --mob-padding: 20px;              /* Відступи до контенту на смартфонах*/
+    --ipad-padding: 50px;              /* Відступи до контенту на айпад */
+    --max-width: 1380px;              /* Обмеження щирини для десктопу */
+}
+
+html,body {
+     font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px;                      /* Розмір основного тексту */
+  line-height: 1.8;                   /* Міжрядковий інтервал (140%) - відносна величина */
+  font-style: normal;
+    color: var(--txt-color-01);
+}
+
+em, i, .italic {
+    font-style: italic;
+}
+
+h1, h2, h3, h5, h6 {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.35rem; }
+
+header > .inside,
+footer > .inside,
+section > .inside {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--ipad-padding);
+    padding-right: var(--ipad-padding);
+}
+
+@media (max-width:640px) {
+    
+    header > .inside,
+    footer > .inside,
+    section > .inside {
+        padding-left: var(--mob-padding);
+        padding-right: var(--ipad-padding);
+    }
+}
