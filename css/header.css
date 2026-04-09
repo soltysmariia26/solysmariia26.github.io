@@ -1,13 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">          /*Задає кодування сторінки*/
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Історія Класифікація Застосування</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="inside">
+        <div class="row">
+
+            <!-- ЛІВА ЧАСТИНА (картинка) -->
+            <div class="col hero-image">
+                <img src="media/hero.png" alt="Hero image">
+            </div>
+
+            <!-- ПРАВА ЧАСТИНА (текст) -->
+            <div class="col hero-text">
+                <h1>
+                    ІСТОРІЯ <br>
+                    КЛАСИФІКАЦІЯ <br>
+                    ЗАСТОСУВАННЯ
+                </h1>
+            </div>
+
+        </div>
+    </div>
+</header>
+
 header .row {
-    border: 1px solid red;
     display: flex;
-    justify-content: center; /* Вирівнювання по основній осі (main axis) */
-    align-items: center;            /* Вирівнювання рядів по ортогональній осі (cross axis) */
-    align-content: center;          /* Вирівнювання усього контенту по ортогональній осі (cross axis) */
-    flex-direction: column;            /* Визначення напряму головної осі */
-    min-height: 100dvh;             /* dvh — Dynamik Viewport Heigh */
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100dvh;
 }
 
+/* КОЛОНКИ */
 header .col {
-    background-color: #ccc;
+    flex: 1;
 }
+
+/* КАРТИНКА */
+.hero-image img {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* ТЕКСТ */
+.hero-text {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-text h1 {
+    text-align: right;
+    color: var(--txt-color-02);
+    max-width: 400px;
+}
+
+header .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100dvh;
+}
+
+/* КОЛОНКИ */
+header .col {
+    flex: 1;
+}
+
+/* КАРТИНКА */
+.hero-image img {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* ТЕКСТ */
+.hero-text {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-text h1 {
+    text-align: right;
+    color: var(--txt-color-02);
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    
+    header .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        text-align: center;
+    }
+
+}
+
+</body>
+</html>
+

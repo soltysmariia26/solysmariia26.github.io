@@ -1,22 +1,22 @@
 :root {
-    --txt-color-01: #555;           /* Колір основного тексту */
-    --txt-color-02: #ccc;           /* Колір тексту інверсія */
-    --header-color: #333;
-    --lnk-color: #930;              /* Колір покликань */
+    --txt-color-01: #000000;           /* Колір основного тексту */
+    --txt-color-02: #ffffff;           /* Колір тексту інверсія */
+    --header-color: #000000;
+    --lnk-color: rgb(250, 61, 120);              /* Колір покликань */
     --lnk-hover: #f30;              /* Колір при наведенні */
-    --bg-primary-main-color: #ccc;  /* Колір основного фону */
-    --bg-second-color: #555;        /* Колір фону 2*/
+    --bg-primary-main-color: rgb(250, 61, 120);  /* Колір основного фону */
+    --bg-second-color: rgb(225, 224, 239);        /* Колір фону 2*/
     --mob-padding: 20px;              /* Відступи до контенту на смартфонах*/
-    --ipad-padding: 50px;              /* Відступи до контенту на айпад */
-    --max-width: 1380px;              /* Обмеження щирини для десктопу */
+    --ipad-padding: 80px;              /* Відступи до контенту на айпад */
+    --max-width: 1352px;              /* Обмеження щирини для десктопу */
 }
 
 html,body {
-     font-family: "Montserrat", sans-serif;
+     font-family: "Fira Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-size: 16px;                      /* Розмір основного тексту */
-  line-height: 1.8;                   /* Міжрядковий інтервал (140%) - відносна величина */
+  line-height: 1.6;                   /* Міжрядковий інтервал (140%) - відносна величина */
   font-style: normal;
     color: var(--txt-color-01);
 }
@@ -25,11 +25,61 @@ em, i, .italic {
     font-style: italic;
 }
 
-h1, h2, h3, h5, h6 {
+h1 {
+    .fira-sans-bold {
+     font-family: "Fira Sans", sans-serif;
+     font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 44px;
+  color: var(--header-color);
+}
+
+h2 {
+font-family: "Georgia", serif;
+    font-weight: 700;       /* Bold */
+    font-size: 32px;
+    color: var(--header-color);
+}
+
+
+h3, h4, h5, h6 {
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
+
+a {
+    color: var(--lnk-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--lnk-hover);
+}
+
+
+header > .inside,
+footer > .inside,
+section > .inside {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--ipad-padding);
+    padding-right: var(--ipad-padding);
+}
+
+
+.bg-primary {
+    background-color: var(--bg-primary-main-color);
+    color: var(--txt-color-02);
+}
+
+.bg-secondary {
+    background-color: var(--bg-second-color);
+}
+
 
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5rem; }
